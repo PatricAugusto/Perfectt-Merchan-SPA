@@ -1,0 +1,37 @@
+/* src/components/Footer/Footer.module.css */
+.footer {
+  background-color: #343a40; /* Cor de fundo escura (cinza escuro do Bootstrap) */
+  color: #dee2e6; /* Cor do texto levemente clara para contrastar com o fundo */
+}
+
+.footer h5 {
+  color: #ffffff; /* Títulos em branco puro */
+  font-weight: bold;
+}
+
+.footer p,
+.footer .text-muted {
+  color: #adb5bd !important; /* Cor mais clara para parágrafos e texto 'muted' */
+  font-size: 0.95rem;
+}
+
+/* Estilo para os links do rodapé */
+.footer .nav-link {
+  color: #dee2e6 !important; /* Cor dos links do menu */
+  padding: 0.25rem 0; /* Espaçamento menor para os links */
+}
+
+.footer .nav-link:hover {
+  color: #ffffff !important; /* Cor dos links ao passar o mouse */
+  text-decoration: underline;
+}
+
+/* Estilo para os ícones sociais */
+.socialIcon {
+  color: #adb5bd; /* Cor padrão dos ícones */
+  transition: color 0.3s ease;
+}
+
+.socialIcon:hover {
+  color: #007bff; /* Cor dos ícones ao passar o mouse (azul primário do Bootstrap) */
+}
