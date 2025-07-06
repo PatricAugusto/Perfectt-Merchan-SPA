@@ -1,0 +1,72 @@
+/* src/sections/ServicesSection/ServicesSection.module.css */
+.servicesSection {
+  padding: 80px 0; /* Mais espaçamento vertical para a seção */
+}
+
+.customCarousel {
+  border-radius: 15px; /* Bordas arredondadas para o carrossel */
+  overflow: hidden; /* Garante que as bordas arredondadas funcionem com as imagens */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.carouselItem {
+  min-height: 450px; /* Altura mínima para cada slide do carrossel */
+  display: flex;
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  position: relative;
+  background-color: #343a40; /* Cor de fundo padrão se não houver imagem */
+}
+
+/* Estilo para a imagem de fundo dentro do item do carrossel */
+.carouselItem img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+  z-index: 0; /* Coloca a imagem abaixo do overlay e do texto */
+}
+
+/* Overlay para escurecer a imagem e destacar o texto */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Cor preta com 60% de opacidade */
+  z-index: 1; /* Acima da imagem, abaixo do texto */
+}
+
+.carouselCaption {
+  position: relative; /* Para garantir que o z-index funcione */
+  z-index: 2; /* Acima do overlay */
+  color: white; /* Cor do texto dentro da legenda */
+  padding-bottom: 5rem; /* Espaçamento inferior para as setas não cobrirem */
+}
+
+.carouselCaption h3 {
+  font-size: 2.5rem; /* Tamanho maior para o título do serviço */
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.carouselCaption p {
+  font-size: 1.25rem; /* Tamanho maior para a descrição */
+  max-width: 700px; /* Limita a largura do texto para melhor leitura */
+  margin: 0 auto; /* Centraliza o parágrafo */
+}
+
+/* Estilos para as setas de navegação (opcional, para customizar) */
+.customCarousel .carousel-control-prev,
+.customCarousel .carousel-control-next {
+  width: 5%; /* Largura menor para os controles */
+  opacity: 0.8; /* Um pouco mais transparente */
+}
+
+.customCarousel .carousel-control-prev:hover,
+.customCarousel .carousel-control-next:hover {
+  opacity: 1; /* Opacidade total ao passar o mouse */
+}
