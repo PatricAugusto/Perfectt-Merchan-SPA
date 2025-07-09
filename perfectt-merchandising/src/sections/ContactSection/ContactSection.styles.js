@@ -2,11 +2,11 @@
 import styled from 'styled-components';
 
 export const ContactWrapper = styled.section`
-  background-color: ${({ theme }) => theme.colors.white}; 
-  color: ${({ theme }) => theme.colors.black}; 
+  background-color: ${({ theme }) => theme.colors.black}; /* ALTERADO para fundo preto */
+  color: ${({ theme }) => theme.colors.textLight}; /* Texto claro para o fundo escuro */
   padding: 80px 0;
   text-align: center;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.black};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.black}; /* Manter ou ajustar borda */
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     padding: 60px 0;
@@ -16,7 +16,7 @@ export const ContactWrapper = styled.section`
 export const ContactTitle = styled.h2`
   font-size: 2.8rem;
   margin-bottom: 1.5rem;
-  color: ${({ theme }) => theme.colors.black};
+  color: ${({ theme }) => theme.colors.gold}; /* Título em dourado */
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     font-size: 2rem;
@@ -29,7 +29,7 @@ export const ContactSubtitle = styled.p`
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  color: ${({ theme }) => theme.colors.black};
+  color: ${({ theme }) => theme.colors.textLight}; /* Subtítulo em texto claro */
 `;
 
 export const FormContainer = styled.div`

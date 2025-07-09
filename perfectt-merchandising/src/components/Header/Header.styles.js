@@ -109,7 +109,7 @@ export const NavbarBrand = styled.a`
   white-space: nowrap;
 
   img {
-    filter: brightness(0) invert(1);
+    
     transition: transform 0.3s ease;
     width: 120px;
     height: auto;

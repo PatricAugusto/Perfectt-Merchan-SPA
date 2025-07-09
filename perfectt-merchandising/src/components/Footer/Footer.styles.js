@@ -2,14 +2,12 @@
 import styled from 'styled-components';
 
 export const FooterWrapper = styled.footer`
-  /* --- Estilos de Background e Borda --- */
-  background-color: ${({ theme }) => theme.colors.black}; /* Fundo escuro, alinhado com o Navbar */
+  background-color: ${({ theme }) => theme.colors.black}; /* MANTIDO como fundo preto */
   border-top: 3px solid ${({ theme }) => theme.colors.gold}; /* Borda superior dourada */
   color: ${({ theme }) => theme.colors.textLight}; /* Texto claro */
   
-  /* --- Espaçamento --- */
-  padding-top: 60px; /* Espaçamento ao topo para separar da seção acima */
-  padding-bottom: 40px; /* Espaçamento inferior (mantido ou ajustado) */
+  padding-top: 60px; 
+  padding-bottom: 40px; 
   padding-left: 20px;
   padding-right: 20px;
 
@@ -17,7 +15,7 @@ export const FooterWrapper = styled.footer`
   font-size: 0.9rem;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-    padding-top: 40px; /* Ajuste o espaçamento para mobile */
+    padding-top: 40px; 
     padding-bottom: 30px;
   }
 `;
@@ -34,7 +32,7 @@ export const FooterContent = styled.div`
 export const FooterLogo = styled.img`
   width: 150px;
   height: auto;
-  filter: brightness(0) invert(1);
+  // filter: brightness(0) invert(1);
   margin-bottom: 1rem;
 `;
 
