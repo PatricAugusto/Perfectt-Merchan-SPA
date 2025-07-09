@@ -10,7 +10,7 @@ import {
 
 function HeroSection() {
   return (
-    <HeroWrapper id="hero"> {/* Adicione o ID para navegação */}
+    <HeroWrapper id="hero">
       <HeroContent>
         <HeroTitle>Sua Marca, Nosso Destino</HeroTitle>
         <HeroSubtitle>Experiências visuais inesquecíveis.</HeroSubtitle>

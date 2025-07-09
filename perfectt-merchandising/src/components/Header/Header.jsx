@@ -1,5 +1,5 @@
 // src/components/Header/Header.jsx
-import React, { useState, useEffect } from 'react'; // Importar useEffect
+import React, { useState, useEffect } from 'react'; 
 import {
   NavbarContainer,
   NavbarBrand,
@@ -17,10 +17,9 @@ function Header() {
     setMenuOpen(!menuOpen);
   };
 
-  // Fechar menu quando a tela for redimensionada para desktop
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 991.98) { // Corresponde ao breakpoint 'lg'
+      if (window.innerWidth > 991.98) { 
         setMenuOpen(false);
       }
     };
@@ -39,7 +38,6 @@ function Header() {
         <NavbarTogglerIcon />
       </NavbarToggler>
 
-      {/* Passa o estado 'menuOpen' como prop 'open' para NavbarNav */}
       <NavbarNav open={menuOpen}>
         <NavLink href="#hero" onClick={() => setMenuOpen(false)}>Início</NavLink>
         <NavLink href="#about" onClick={() => setMenuOpen(false)}>Sobre</NavLink>

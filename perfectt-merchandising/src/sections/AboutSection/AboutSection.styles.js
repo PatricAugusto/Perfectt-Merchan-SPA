@@ -2,11 +2,11 @@
 import styled from 'styled-components';
 
 export const AboutWrapper = styled.section`
-  background-color: ${({ theme }) => theme.colors.white}; /* Fundo claro para contraste */
-  color: ${({ theme }) => theme.colors.black}; /* Texto escuro para o fundo claro */
+  background-color: ${({ theme }) => theme.colors.white}; 
+  color: ${({ theme }) => theme.colors.black}; 
   padding: 80px 0;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.black}; /* Linha divisória */
-  text-align: center; /* Centraliza o texto dentro da seção */
+  border-bottom: 1px solid ${({ theme }) => theme.colors.black}; 
+  text-align: center; 
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     padding: 60px 0;
@@ -14,9 +14,9 @@ export const AboutWrapper = styled.section`
 `;
 
 export const AboutContent = styled.div`
-  max-width: 960px; /* Simula um container para o conteúdo */
+  max-width: 960px; 
   margin: 0 auto;
-  padding: 0 15px; /* Padding interno para as laterais */
+  padding: 0 15px; 
 `;
 
 export const AboutTitle = styled.h2`
@@ -33,7 +33,7 @@ export const AboutText = styled.p`
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 2rem;
-  max-width: 700px; /* Limita a largura do parágrafo para melhor legibilidade */
+  max-width: 700px; 
   margin-left: auto;
   margin-right: auto;
 `;
@@ -45,7 +45,7 @@ export const AboutButton = styled.a`
   border-radius: 5px;
   font-weight: bold;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  display: inline-block; /* Para o padding e margem funcionarem corretamente */
+  display: inline-block;
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.goldLight};

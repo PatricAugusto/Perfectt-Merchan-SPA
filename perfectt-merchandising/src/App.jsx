@@ -1,4 +1,4 @@
-// src/App.jsx (Este arquivo já está configurado, apenas para referência)
+// src/App.jsx 
 import React from 'react';
 import Header from './components/Header/Header';
 import HeroSection from './sections/HeroSection/HeroSection';

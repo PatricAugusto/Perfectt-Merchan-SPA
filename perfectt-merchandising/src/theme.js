@@ -3,7 +3,7 @@
 const theme = {
   colors: {
     black: '#1a1a1a',
-    white: '#f8f8f8', // Nosso off-white suave
+    white: '#f8f8f8', // off-white suave
     gold: '#b8860b',
     goldLight: '#d4af37',
     textDark: '#1a1a1a', // Aponta para black
@@ -14,7 +14,7 @@ const theme = {
     heading: "'Playfair Display', serif",
     body: "'Open Sans', sans-serif",
   },
-  // Você pode adicionar mais variáveis aqui, como breakpoints, espaçamentos, etc.
+  
   breakpoints: {
     sm: '576px',
     md: '768px',

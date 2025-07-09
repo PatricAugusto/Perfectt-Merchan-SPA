@@ -2,8 +2,8 @@
 import styled from 'styled-components';
 
 export const ContactWrapper = styled.section`
-  background-color: ${({ theme }) => theme.colors.white}; /* Fundo claro */
-  color: ${({ theme }) => theme.colors.black}; /* Texto escuro */
+  background-color: ${({ theme }) => theme.colors.white}; 
+  color: ${({ theme }) => theme.colors.black}; 
   padding: 80px 0;
   text-align: center;
   border-bottom: 1px solid ${({ theme }) => theme.colors.black};
@@ -33,18 +33,18 @@ export const ContactSubtitle = styled.p`
 `;
 
 export const FormContainer = styled.div`
-  background-color: ${({ theme }) => theme.colors.black}; /* Fundo escuro para o formulário */
-  color: ${({ theme }) => theme.colors.textLight}; /* Texto claro dentro do formulário */
+  background-color: ${({ theme }) => theme.colors.black}; 
+  color: ${({ theme }) => theme.colors.textLight}; 
   padding: 3rem;
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  max-width: 700px; /* Limita a largura do formulário */
-  margin: 0 auto; /* Centraliza o formulário */
-  text-align: left; /* Alinha o texto do formulário à esquerda */
+  max-width: 700px; 
+  margin: 0 auto;
+  text-align: left; 
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     padding: 2rem;
-    margin: 0 15px; /* Margem nas laterais em mobile */
+    margin: 0 15px; 
   }
 `;
 
@@ -64,14 +64,14 @@ export const FormInput = styled.input`
   padding: 0.8rem;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.08); /* Fundo sutil para inputs */
+  background-color: rgba(255, 255, 255, 0.08); 
   color: ${({ theme }) => theme.colors.textLight};
   font-size: 1rem;
 
   &:focus {
     outline: none;
     border-color: ${({ theme }) => theme.colors.gold};
-    box-shadow: 0 0 0 0.25rem rgba(184, 134, 11, 0.25); /* Sombra dourada no foco */
+    box-shadow: 0 0 0 0.25rem rgba(184, 134, 11, 0.25); 
   }
 
   &::placeholder {
@@ -88,7 +88,7 @@ export const FormTextarea = styled.textarea`
   color: ${({ theme }) => theme.colors.textLight};
   font-size: 1rem;
   min-height: 120px;
-  resize: vertical; /* Permite redimensionar verticalmente */
+  resize: vertical;
 
   &:focus {
     outline: none;
@@ -111,8 +111,8 @@ export const SubmitButton = styled.button`
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  display: block; /* Ocupa a largura total */
-  width: 100%; /* Ocupa a largura total */
+  display: block; 
+  width: 100%; 
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.goldLight};
@@ -120,6 +120,6 @@ export const SubmitButton = styled.button`
   }
 
   &:active {
-    transform: translateY(0); /* Remove o efeito de elevação ao clicar */
+    transform: translateY(0); 
   }
 `;
