@@ -8,7 +8,7 @@ import {
   NavbarToggler,
   NavbarTogglerIcon,
 } from './Header.styles';
-import logo from '../../assets/perfectt-logo.png';
+import logo from '../../assets/logotipo.png';
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);

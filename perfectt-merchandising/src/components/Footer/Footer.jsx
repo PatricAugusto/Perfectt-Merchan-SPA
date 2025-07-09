@@ -8,7 +8,7 @@ import {
   FooterLink,
   CopyrightText
 } from './Footer.styles'; // <--- Caminho correto para o arquivo de estilos?
-import logo from '../../assets/perfectt-logo.png'; 
+import logo from '../../assets/logotipo.png'; 
 
 function Footer() {
   const currentYear = new Date().getFullYear();

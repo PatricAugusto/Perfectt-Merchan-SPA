@@ -17,8 +17,7 @@ export const NavbarContainer = styled.nav`
   border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil */
 
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-  border-bottom-left-radius: 25px; 
-  border-bottom-right-radius: 25px;
+  border-radius: 50px;
   
   z-index: 1030;
   transition: all 0.3s ease-in-out;

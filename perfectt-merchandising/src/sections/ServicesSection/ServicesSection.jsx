@@ -12,8 +12,8 @@ import {
 
 import designImage from '../../assets/services/design-criativo.png';
 import producaoImage from '../../assets/services/producao-montagem.png';
-import gestaoImage from '../../assets/services/gestao-projetos.png';
-import expositoresImage from '../../assets/services/expositores-personalizados.png';
+import gestaoImage from '../../assets/services/gestao-projetos.jpeg';
+import expositoresImage from '../../assets/services/expositores-personalizados.jpeg';
 
 function ServicesSection() {
  

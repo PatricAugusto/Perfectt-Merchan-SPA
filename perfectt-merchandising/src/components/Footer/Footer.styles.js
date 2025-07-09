@@ -2,12 +2,12 @@
 import styled from 'styled-components';
 
 export const FooterWrapper = styled.footer`
-  background-color: ${({ theme }) => theme.colors.black}; /* MANTIDO como fundo preto */
+  background-color: ${({ theme }) => theme.colors.white};
   border-top: 3px solid ${({ theme }) => theme.colors.gold}; /* Borda superior dourada */
   color: ${({ theme }) => theme.colors.textLight}; /* Texto claro */
   
-  padding-top: 60px; 
-  padding-bottom: 40px; 
+  padding-top: 30px; 
+  padding-bottom: 20px; 
   padding-left: 20px;
   padding-right: 20px;
 
@@ -59,5 +59,5 @@ export const FooterLink = styled.a`
 export const CopyrightText = styled.p`
   margin-top: 2rem;
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(0, 0, 0, 0.7);
 `;
