@@ -2,50 +2,64 @@
 import styled from 'styled-components';
 
 export const NavbarContainer = styled.nav`
-  background-color: ${({ theme }) => theme.colors.black};
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
- 
-   border-bottom-left-radius: 25px; 
-   border-bottom-right-radius: 25px; 
+  /* --- Reintroduzindo Posicionamento Fixo e Centralização --- */
+  position: fixed;
+  top: 15px; /* Deixa uma pequena margem do topo */
+  max-width: 1200px;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
   
-  position: absolute; 
-  top: 0;          
-  width: 100%;     
-  left: 0;         
-  transform: none; 
+  /* --- Estilos Glassmorphism --- */
+  background-color: rgba(0, 0, 0, 0.4); /* Fundo preto com 40% de opacidade */
+  backdrop-filter: blur(10px); /* Efeito de desfoque (glassmorphism) */
+  -webkit-backdrop-filter: blur(10px); /* Para compatibilidade com navegadores Webkit */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil */
 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  border-bottom-left-radius: 25px; 
+  border-bottom-right-radius: 25px;
+  
   z-index: 1030;
   transition: all 0.3s ease-in-out;
   padding: 1rem 2rem;
 
-  /* --- Ajuste para Centralização Interna do Conteúdo --- */
   display: flex;
-  flex-direction: row; 
-  align-items: center;   
-  justify-content: center;
+  justify-content: space-between; 
+  align-items: center;            
+
+  /* Estilo para esconder/mostrar (será controlado por props no Header.jsx) */
+  opacity: ${({ visible }) => (visible ? 1 : 0)};
+  pointer-events: ${({ visible }) => (visible ? 'auto' : 'none')}; /* Permite/impede cliques */
+  transform: translateX(-50%) translateY(${({ visible }) => (visible ? '0' : '-100%')}); /* Esconde para cima */
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+
 
   @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
-    width: 100%; 
-    border-radius: 0; 
-    top: 0;               
-    padding: 1rem 1rem;  
-    flex-direction: column;
+    width: calc(100% - 30px); 
+    border-radius: 15px;     
+    top: 10px;               
+    padding: 1rem 1rem;
+    
+    flex-direction: row; 
+    justify-content: space-between; 
   }
 `;
 
 export const NavbarNav = styled.div`
   display: flex;
-  margin-left: auto;
+  margin-left: auto; /* Empurra os links para a direita em desktop */
   
   @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
-    flex-direction: column;
+    flex-direction: column; /* Links em coluna em mobile */
     width: 100%;
-    margin-left: 0;
+    margin-left: 0; /* Remove a margem auto em mobile */
     margin-top: 1rem;
     display: ${({ open }) => (open ? 'flex' : 'none')};
     background-color: ${({ theme }) => theme.colors.black};
     border-radius: 10px;
     padding: 1rem;
+    align-items: center; /* Centraliza os links quando em coluna */
   }
 `;
 
@@ -53,7 +67,7 @@ export const NavLink = styled.a`
   color: ${({ theme }) => theme.colors.white} !important;
   font-family: ${({ theme }) => theme.fonts.body};
   font-weight: 600;
-  margin: 0 1.25rem; 
+  margin: 0 1.25rem; /* Espaçamento entre os links */
   font-size: 1.1rem;
   position: relative;
   transition: color 0.3s ease, transform 0.3s ease;
@@ -81,7 +95,7 @@ export const NavLink = styled.a`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
-    margin: 0.5rem 0; 
+    margin: 0.5rem 0; /* Espaçamento vertical entre links em mobile */
     text-align: center;
   }
 `;

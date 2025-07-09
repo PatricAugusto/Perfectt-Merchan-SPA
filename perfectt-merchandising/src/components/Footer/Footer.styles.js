@@ -2,15 +2,28 @@
 import styled from 'styled-components';
 
 export const FooterWrapper = styled.footer`
-  background-color: ${({ theme }) => theme.colors.black};
-  color: ${({ theme }) => theme.colors.textLight};
-  padding: 40px 20px;
+  /* --- Estilos de Background e Borda --- */
+  background-color: ${({ theme }) => theme.colors.black}; /* Fundo escuro, alinhado com o Navbar */
+  border-top: 3px solid ${({ theme }) => theme.colors.gold}; /* Borda superior dourada */
+  color: ${({ theme }) => theme.colors.textLight}; /* Texto claro */
+  
+  /* --- Espaçamento --- */
+  padding-top: 60px; /* Espaçamento ao topo para separar da seção acima */
+  padding-bottom: 40px; /* Espaçamento inferior (mantido ou ajustado) */
+  padding-left: 20px;
+  padding-right: 20px;
+
   text-align: center;
   font-size: 0.9rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    padding-top: 40px; /* Ajuste o espaçamento para mobile */
+    padding-bottom: 30px;
+  }
 `;
 
 export const FooterContent = styled.div`
-  max-width: 1200px;
+  max-width: 1200px; /* Alinha com a largura máxima do restante do conteúdo */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -21,7 +34,7 @@ export const FooterContent = styled.div`
 export const FooterLogo = styled.img`
   width: 150px;
   height: auto;
-  filter: brightness(0) invert(1); 
+  filter: brightness(0) invert(1);
   margin-bottom: 1rem;
 `;
 
@@ -31,7 +44,7 @@ export const FooterLinks = styled.div`
   gap: 1.5rem;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-    flex-direction: column; 
+    flex-direction: column;
     gap: 0.5rem;
   }
 `;
@@ -41,7 +54,7 @@ export const FooterLink = styled.a`
   transition: color 0.3s ease;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.gold}; 
+    color: ${({ theme }) => theme.colors.gold};
   }
 `;
 

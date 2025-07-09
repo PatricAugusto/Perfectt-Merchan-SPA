@@ -1,6 +1,6 @@
 // src/sections/HeroSection/HeroSection.styles.js
 import styled from 'styled-components';
-import teamBackground from '../../assets/equipe.png';
+import teamBackground from '../../assets/equipe.png'; 
 
 export const HeroWrapper = styled.section`
   /* Estilos de fundo */
@@ -30,16 +30,18 @@ export const HeroWrapper = styled.section`
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-top: 80px; 
+  
+  /* --- REINTRODUZIDO: padding-top para compensar o Navbar fixo --- */
+  padding-top: 80px; /* Ajuste conforme a altura do seu Navbar */
 
   /* Garante que o conteúdo da seção fique acima do overlay */
-  > * { /* Aplica z-index a todos os filhos diretos do HeroWrapper */
+  > * { 
     position: relative;
     z-index: 2;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
-    padding-top: 60px;
+    padding-top: 60px; /* Ajuste para mobile */
     background-attachment: scroll; 
   }
 `;

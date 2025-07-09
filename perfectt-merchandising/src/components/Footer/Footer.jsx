@@ -1,19 +1,19 @@
 // src/components/Footer/Footer.jsx
 import React from 'react';
 import {
-  FooterWrapper,
+  FooterWrapper, // <--- Importação correta?
   FooterContent,
   FooterLogo,
   FooterLinks,
   FooterLink,
   CopyrightText
-} from './Footer.styles';
-import logo from '../../assets/perfectt-logo.png';
+} from './Footer.styles'; // <--- Caminho correto para o arquivo de estilos?
+import logo from '../../assets/perfectt-logo.png'; 
 
 function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <FooterWrapper>
+    <FooterWrapper> {/* <--- Componente Styled aplicado aqui? */}
       <FooterContent>
         <FooterLogo src={logo} alt="Perfectt Merchandising Logo" />
         <p>Transformando visões em realidade visual.</p>
