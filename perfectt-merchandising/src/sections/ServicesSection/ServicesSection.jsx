@@ -10,10 +10,10 @@ import {
   CarouselDescription, 
 } from './ServicesSection.styles';
 
-import designImage from '../../assets/services/design-criativo.png';
-import producaoImage from '../../assets/services/producao-montagem.png';
-import gestaoImage from '../../assets/services/gestao-projetos.jpeg';
-import expositoresImage from '../../assets/services/expositores-personalizados.jpeg';
+import designImage from '../../assets/services/expositores1.jpeg';
+import producaoImage from '../../assets/services/expositores2.jpeg';
+import gestaoImage from '../../assets/services/expositores3.jpeg';
+import expositoresImage from '../../assets/services/expositores4.jpeg';
 
 function ServicesSection() {
  
